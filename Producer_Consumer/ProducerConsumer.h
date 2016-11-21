@@ -10,10 +10,8 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include "Semaphore.h"
-
-// for sleep
 #include <unistd.h>
+#include "Semaphore.h"
 
 using namespace std;
 

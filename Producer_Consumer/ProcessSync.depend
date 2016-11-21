@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1479700449 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/ProducerConsumer.cpp
+	"ProducerConsumer.h"
+
+1479703500 /run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/ProducerConsumer.h
+	<thread>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	"Semaphore.h"
+
+1479695118 /run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/Semaphore.h
+	<stdio.h>
+	<stdlib.h>
+	<semaphore.h>
+	"utils.h"
+
+1479613062 /run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/utils.h
+
+1479613600 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/Semaphore.cpp
+	"Semaphore.h"
+
+1479613097 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/utils.cpp
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
+	"utils.h"
+
+1479703856 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/main.cpp
+	<iostream>
+	<thread>
+	<unistd.h>
+	"ProducerConsumer.h"
+	"ReaderWriter.h"
+
+1479703891 /run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/ReaderWriter.h
+	<thread>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string>
+	"Semaphore.h"
+
+1479703958 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/ReaderWriter.cpp
+	"ReaderWriter.h"
+

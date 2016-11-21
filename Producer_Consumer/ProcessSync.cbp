@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="ProducerConsumer.cpp" />
 		<Unit filename="ProducerConsumer.h" />
+		<Unit filename="ReaderWriter.cpp" />
+		<Unit filename="ReaderWriter.h" />
 		<Unit filename="Semaphore.cpp" />
 		<Unit filename="Semaphore.h" />
 		<Unit filename="main.cpp" />
