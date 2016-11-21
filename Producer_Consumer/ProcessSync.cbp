@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Philosophers.cpp" />
+		<Unit filename="Philosophers.h" />
 		<Unit filename="ProducerConsumer.cpp" />
 		<Unit filename="ProducerConsumer.h" />
 		<Unit filename="ReaderWriter.cpp" />

@@ -27,12 +27,13 @@
 	<pthread.h>
 	"utils.h"
 
-1479703856 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/main.cpp
+1479705024 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/main.cpp
 	<iostream>
 	<thread>
 	<unistd.h>
 	"ProducerConsumer.h"
 	"ReaderWriter.h"
+	"Philosophers.h"
 
 1479703891 /run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/ReaderWriter.h
 	<thread>
@@ -43,6 +44,17 @@
 	<string>
 	"Semaphore.h"
 
-1479703958 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/ReaderWriter.cpp
+1479704187 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/ReaderWriter.cpp
 	"ReaderWriter.h"
+
+1479705892 /run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/Philosophers.h
+	<thread>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	"Semaphore.h"
+
+1479705290 source:/run/media/kenystev/Datos/Backup/Unitec/2016/IV Modulo/Sistemas_Operativos_1/Semaphore/Producer_Consumer/Philosophers.cpp
+	"Philosophers.h"
 
