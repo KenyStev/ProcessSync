@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//#include <pthread.h>
+#include <pthread.h>
 #include <semaphore.h>
 #include "utils.h"
 
@@ -24,6 +24,19 @@ public:
 	sem_t *semaphore;
 	Sem(int value);
 	virtual ~Sem();
+	void wait();
+    void signal();
+};
+
+class MySem : public Semaphore
+{
+public:
+	int value, wakeups;
+    pthread_mutex_t *mutex;
+    pthread_cond_t *cond;
+
+	MySem(int value);
+	virtual ~MySem();
 	void wait();
     void signal();
 };

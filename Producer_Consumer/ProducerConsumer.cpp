@@ -5,7 +5,7 @@ ProducerConsumer::ProducerConsumer()
     in=0;
     out=0;
     item=0;
-    full = new Sem(0);
+    full = new MySem(0);
     empty = new Sem(BUFF_SIZE);
     mutex = new pthread_mutex_t();
     pthread_mutex_init(mutex, NULL);

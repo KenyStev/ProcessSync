@@ -23,3 +23,44 @@ void Sem::signal()
 	int n = sem_post(semaphore);
 	if (n != 0) perror_exit("sem_post failed");
 }
+
+/** MySem Implementation */
+MySem::MySem(int value)
+{
+	this->value = value;
+	wakeups = 0;
+	mutex = make_mutex();
+	cond = make_cond();
+}
+
+MySem::~MySem()
+{
+    delete mutex;
+    delete cond;
+}
+
+void MySem::wait()
+{
+	mutex_lock(mutex);
+    value--;
+
+    if (value < 0) {
+        do {
+            cond_wait(cond,mutex);
+        } while (wakeups < 1);
+        wakeups--;
+    }
+    mutex_unlock(mutex);
+}
+
+void MySem::signal()
+{
+    mutex_lock(mutex);
+    value++;
+
+    if (value <= 0) {
+        wakeups++;
+        cond_signal(cond);
+    }
+    mutex_unlock(mutex);
+}

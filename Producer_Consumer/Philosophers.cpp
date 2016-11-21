@@ -2,8 +2,8 @@
 
 Philosophers::Philosophers()
 {
-    turn = new Sem(1);
-    sticks = new Sem(3);
+    turn = new MySem(1);
+    sticks = new MySem(3);
 }
 
 Philosophers::~Philosophers()

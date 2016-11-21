@@ -3,7 +3,7 @@
 ReaderWriter::ReaderWriter()
 {
     data = "Nada";
-    access_to_write = new Sem(1);
+    access_to_write = new MySem(1);
 }
 
 ReaderWriter::~ReaderWriter()
