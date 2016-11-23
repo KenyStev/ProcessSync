@@ -1,6 +1,6 @@
 #include "Semaphore.h"
 
-Sem::Sem(int value)
+Sem::Sem(int value) : Semaphore(value)
 {
 	semaphore = new sem_t();
 	int n = sem_init(semaphore, 0, value);
@@ -25,9 +25,8 @@ void Sem::signal()
 }
 
 /** MySem Implementation */
-MySem::MySem(int value)
+MySem::MySem(int value) : Semaphore(value)
 {
-	this->value = value;
 	wakeups = 0;
 	mutex = make_mutex();
 	cond = make_cond();

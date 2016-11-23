@@ -17,7 +17,7 @@ class ReaderWriter
         string data;
         Semaphore *access_to_write;
 
-        ReaderWriter();
+        ReaderWriter(Semaphore *sem);
         virtual ~ReaderWriter();
         void run();
         void* Reader(ReaderWriter * parent,int index);

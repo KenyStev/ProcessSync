@@ -10,7 +10,8 @@
 class Semaphore
 {
     public:
-        Semaphore(){};
+        int value;
+        Semaphore(int val){value=val;};
         virtual ~Semaphore(){};
         virtual void wait() = 0;
         virtual void signal() = 0;
@@ -31,7 +32,7 @@ public:
 class MySem : public Semaphore
 {
 public:
-	int value, wakeups;
+	int wakeups;
     pthread_mutex_t *mutex;
     pthread_cond_t *cond;
 

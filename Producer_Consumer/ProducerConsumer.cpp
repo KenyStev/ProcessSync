@@ -1,12 +1,13 @@
 #include "ProducerConsumer.h"
 
-ProducerConsumer::ProducerConsumer()
+ProducerConsumer::ProducerConsumer(Semaphore *sem_full,Semaphore *sem_empty)
 {
     in=0;
     out=0;
     item=0;
-    full = new MySem(0);
-    empty = new Sem(BUFF_SIZE);
+    buf = new int[sem_empty->value];
+    full = sem_full;
+    empty = sem_empty;
     mutex = new pthread_mutex_t();
     pthread_mutex_init(mutex, NULL);
 }
@@ -16,6 +17,7 @@ ProducerConsumer::~ProducerConsumer()
     delete full;
     delete empty;
     delete mutex;
+    delete buf;
 }
 
 void ProducerConsumer::run()

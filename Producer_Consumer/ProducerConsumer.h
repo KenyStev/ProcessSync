@@ -18,7 +18,7 @@ using namespace std;
 class ProducerConsumer
 {
     public:
-    	int buf[BUFF_SIZE];   /* shared var */
+    	int *buf;   /* shared var */
 	    int in;               /* buf[in%BUFF_SIZE] is the first empty slot */
 	    int out;              /* buf[out%BUFF_SIZE] is the first full slot */
 	    int item;
@@ -28,7 +28,7 @@ class ProducerConsumer
 	    // use correct type here
 	    pthread_mutex_t *mutex;
 
-        ProducerConsumer();
+        ProducerConsumer(Semaphore *sem_full,Semaphore *sem_empty);
         virtual ~ProducerConsumer();
         void *Producer(ProducerConsumer *parent,int);
         void *Consumer(ProducerConsumer *parent,int);

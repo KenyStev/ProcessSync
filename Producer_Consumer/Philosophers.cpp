@@ -1,9 +1,10 @@
 #include "Philosophers.h"
 
-Philosophers::Philosophers()
+Philosophers::Philosophers(Semaphore *sem)
 {
-    turn = new MySem(1);
-    sticks = new MySem(3);
+    NF = sem->value;
+    turn = new Sem(sem->value/2);
+    sticks = sem;
 }
 
 Philosophers::~Philosophers()
@@ -13,7 +14,6 @@ Philosophers::~Philosophers()
 
 void Philosophers::run()
 {
-    int NF=3;
     thread *idF[NF];
 
     for(int index=0; index<NF; index++)
@@ -41,10 +41,10 @@ void* Philosophers::Eat(Philosophers*parent,int index)
         parent->sticks->signal();
 
         parent->turn->signal();
-        printf("F_%d left a stick\n",index);
+//        printf("F_%d left a stick\n",index);
 
         parent->sticks->signal();
-        printf("F_%d left both sticks\n",index);
+//        printf("F_%d left both sticks\n",index);
         usleep(1);
     }
 }

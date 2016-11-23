@@ -13,9 +13,10 @@ using namespace std;
 class Philosophers
 {
     public:
+        int NF;
         Semaphore *sticks,*turn;
 
-        Philosophers();
+        Philosophers(Semaphore*);
         virtual ~Philosophers();
 
         void run();

@@ -1,9 +1,9 @@
 #include "ReaderWriter.h"
 
-ReaderWriter::ReaderWriter()
+ReaderWriter::ReaderWriter(Semaphore *sem)
 {
     data = "Nada";
-    access_to_write = new MySem(1);
+    access_to_write = sem;
 }
 
 ReaderWriter::~ReaderWriter()
